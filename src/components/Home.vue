@@ -30,8 +30,8 @@
 </template>
 
 <script>
-import Page1 from "@/components/Page1.vue";
-import Page2 from "@/components/Page2.vue";
+import Page1 from "@/pages/Page1.vue";
+import Page2 from "@/pages/Page2.vue";
 
 export default {
   name: "Home",
