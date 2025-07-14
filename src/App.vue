@@ -2,26 +2,26 @@
   <div>
     <div class="row">
       <div class="col-xs-offset-2 col-xs-8">
-        <div class="page-header"><h2>Vue Router Demo</h2></div>
+        <div class="page-header"><h2>路由切换练习</h2></div>
       </div>
     </div>
     <div class="row">
       <div class="col-xs-2 col-xs-offset-2">
-        <div class="list-group">
-          <!--原始使用a标签跳转多个页面,多页面应用-->
-          <!--          <a class="list-group-item active" href="./about.html">About</a>-->
-          <!--          <a class="list-group-item" href="./home.html">Home</a>-->
-          <!--vue中借助router=link标签实现路由的切换-->
-          <router-link class="list-group-item" active-class="active" to="/page1">页面1</router-link>
-          <router-link class="list-group-item" active-class="active" to="/page2">页面2</router-link>
-        </div>
+        <el-menu
+            class="el-menu-demo"
+            mode="horizontal"
+            :default-active="$route.path"
+            router
+        >
+          <el-menu-item index="/page1">典型表单</el-menu-item>
+          <el-menu-item index="/page2">基础表格</el-menu-item>
+        </el-menu>
       </div>
       <div class="col-xs-6">
         <div class="panel">
           <div class="panel-body">
-            <!--router-view确定视图的位置-->
-            <router-view>
-            </router-view>
+            <!-- router-view 确定视图的位置 -->
+            <router-view></router-view>
           </div>
         </div>
       </div>
@@ -35,9 +35,7 @@ import Page2 from "@/components/Page2.vue";
 
 export default {
   name: "App",
-  components: {Page1,Page2},
+  components: { Page1, Page2 },
 }
 </script>
-<style lang="css" scoped>
 
-</style>
